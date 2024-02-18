@@ -1,4 +1,4 @@
 # DesarrolloWebDAAA
-Repositorio para la materia SIS256 
+Desarrollo Web 1-24
 # Nombre
 Daniel Andree Arancibia Aguilar
