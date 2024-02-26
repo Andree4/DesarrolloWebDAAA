@@ -1,0 +1,49 @@
+table {
+  border-collapse: collapse;
+}
+header {
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(65, 52, 77);
+  color: white;
+}
+header > h1 {
+  margin: 0;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(251, 237, 255);
+}
+body > h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+/*footer*/
+footer {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(65, 52, 77);
+  padding-top: 1px;
+  justify-content: space-evenly;
+}
+h3 {
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+}
+.foot {
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  list-style: none;
+}
+.foot,
+a {
+  padding-top: 5px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}

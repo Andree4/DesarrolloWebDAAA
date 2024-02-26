@@ -1,0 +1,106 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+}
+header {
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 79, 79);
+  margin: 0;
+  color: white;
+}
+header > h1 {
+  margin: 0;
+  padding: 10px;
+  color: white;
+}
+div {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+div > ul > h1 {
+  text-align: center;
+  color: rgb(255, 79, 79);
+  margin: 20px 0;
+}
+div > ul > p {
+  font-weight: bold;
+  font-size: large;
+}
+div > h1 > p {
+  text-align: center;
+  color: rgb(255, 79, 79);
+  margin: 20px 0;
+}
+div > img {
+  width: 450px;
+  height: 550px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+#fecha {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+table,
+th,
+td {
+  border: 1px solid rgb(255, 0, 0);
+  padding: 10px;
+  text-align: center;
+}
+.comidas {
+  font-size: x-large;
+  display: flex;
+  justify-content: space-around;
+  color: rgb(255, 79, 79);
+}
+
+th {
+  background-color: rgb(255, 79, 79);
+  color: white;
+}
+
+li {
+  margin-bottom: 10px;
+  font-weight: bold;
+  list-style: none;
+}
+
+.flag {
+  display: block;
+  margin: 20px auto;
+  width: 100px;
+  height: auto;
+}
+/*footer*/
+footer {
+  display: flex;
+  font-family: sans-serif;
+  background-color: rgb(255, 79, 79);
+  padding-top: 1px;
+  justify-content: space-evenly;
+}
+h3 {
+  text-align: center;
+  font-size: xx-large;
+  color: white;
+}
+.foot {
+  margin-top: 20px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.foot,
+a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
