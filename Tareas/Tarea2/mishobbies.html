@@ -4,34 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="mishobbies.css" />
   </head>
-  <body>
+  <header>
+    <h1>Desarrollo Web</h1>
     <h1>Mis Hobbies</h1>
-    <p>Tengo varios hobbies pero lo que mas me gustan serian</p>
-    <ul>
-      <li>Programación</li>
-      <li>Juegos</li>
-      <li>Dibujo</li>
-    </ul>
-
-    <h1>Lenguajes de Programación que aprendi</h1>
-    <img width="300" src="recursos/programación.jpg" alt="" />
-    <ul>
-      <li>Java</li>
-      <li>Python</li>
-      <li>C++</li>
-      <li>JavaScript</li>
-    </ul>
-    <h2>Juegos</h2>
-    <p>Mis juegos favoritos</p>
-    <ul>
-      <li>Hollow Knight</li>
-      <li>Adofai</li>
-      <li>Grounded</li>
-    </ul>
-    <h1>Dibujo</h1>
-    <p>Un dibujo que hice de mi mascota</p>
-    <img width="300" src="recursos/Rocky.jpg" alt="" />
+  </header>
+  <body>
+    <h1>Hobbies</h1>
+    <div class="hobbies">
+      <ul>
+        <li>Programación</li>
+        <li>Juegos</li>
+        <li>Dibujo</li>
+      </ul>
+    </div>
+    <div>
+      <h1>Lenguajes de Programación que aprendi</h1>
+      <ul>
+        <li>Java <br /><img src="recursos/java.jpg" alt="" /></li>
+        <li>
+          JavaScript<br />
+          <img src="recursos/js.png" alt="" />
+        </li>
+        <li>Python <br /><img src="recursos/python.png" alt="" /></li>
+        <li>C++ <br /><img src="recursos/c++.jpg" alt="" /></li>
+      </ul>
+    </div>
+    <div>
+      <h1>Juegos Favoritos</h1>
+      <ul>
+        <li>Hollow Knight</li>
+        <video src="recursos/hollowknight.mp4" autoplay></video>
+        <li>Adofai</li>
+        <video src="recursos/adofai.mp4" autoplay></video>
+        <li>Grounded</li>
+        <img src="recursos/grounded.jpeg" alt="" />
+      </ul>
+    </div>
+    <div class="dibujo">
+      <h1>Dibujo</h1>
+      <p>Un dibujo que hice de mi mascota "Rocky"</p>
+      <img width="300" src="recursos/Rocky.jpg" alt="" />
+    </div>
+    <audio src="recursos/audiofondo.mp3" autoplay></audio>
   </body>
 
   <footer>
@@ -40,9 +56,9 @@
       <li><a href="yo.html">Yo</a></li>
       <li><a href="mifamilia.html">Mi Familia</a></li>
     </ul>
-    <ul>
-      <li><a href="mishobbies.html">Mis Hobbies</a></li>
+    <ul class="foot">
       <li><a href="misamigos.html">Mis Amigos</a></li>
+      <li><a href="miciudad.html">Mi Ciudad</a></li>
     </ul>
   </footer>
 </html>

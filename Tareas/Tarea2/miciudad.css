@@ -1,7 +1,8 @@
 body {
   font-family: "Arial", sans-serif;
   margin: 0;
-  background-color: #ffffff;
+  background-color: rgb(99, 99, 99);
+  text-shadow: black 1px 1px 1px;
 }
 header {
   padding: 20px;
@@ -10,28 +11,30 @@ header {
   display: flex;
   justify-content: space-between;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(255, 79, 79);
+  background-color: rgb(29, 29, 29);
   margin: 0;
-  color: white;
 }
 header > h1 {
+  color: rgb(255, 79, 79);
+  text-shadow: black 1px 1px 1px;
   margin: 0;
-  padding: 10px;
-  color: white;
 }
 div {
   display: flex;
   padding: 20px;
   justify-content: center;
+  color: white;
 }
 div > ul > h1 {
   text-align: center;
   color: rgb(255, 79, 79);
+
   margin: 20px 0;
 }
 div > ul > p {
   font-weight: bold;
   font-size: large;
+  text-shadow: black 1px 1px 1px;
 }
 div > h1 > p {
   text-align: center;
@@ -39,16 +42,12 @@ div > h1 > p {
   margin: 20px 0;
 }
 div > img {
-  width: 450px;
+  width: 650px;
   height: 550px;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-}
-#fecha {
-  margin-left: 30%;
-  margin-right: 30%;
 }
 table,
 th,
@@ -56,6 +55,7 @@ td {
   border: 1px solid rgb(255, 0, 0);
   padding: 10px;
   text-align: center;
+  color: white;
 }
 .comidas {
   font-size: x-large;
@@ -70,6 +70,7 @@ th {
 }
 
 li {
+  color: white;
   margin-bottom: 10px;
   font-weight: bold;
   list-style: none;
@@ -78,29 +79,30 @@ li {
 .flag {
   display: block;
   margin: 20px auto;
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 /*footer*/
 footer {
   display: flex;
-  font-family: sans-serif;
-  background-color: rgb(255, 79, 79);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(29, 29, 29);
   padding-top: 1px;
   justify-content: space-evenly;
 }
 h3 {
   text-align: center;
   font-size: xx-large;
-  color: white;
+  color: rgb(255, 79, 79);
 }
 .foot {
   margin-top: 20px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
+  list-style: none;
 }
 .foot,
 a {
-  color: rgb(255, 255, 255);
+  padding-top: 5px;
+  color: rgb(255, 79, 79);
   text-decoration: none;
 }

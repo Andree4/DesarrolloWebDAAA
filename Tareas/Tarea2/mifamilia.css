@@ -1,5 +1,16 @@
 table {
   border-collapse: collapse;
+  width: 30%;
+  margin: auto;
+  text-align: center;
+  color: white;
+  background-color: rgb(29, 29, 29);
+  font-size: x-large;
+  border-color: aquamarine;
+}
+.NyA {
+  color: rgb(223, 255, 244);
+  font-weight: bold;
 }
 header {
   padding: 20px;
@@ -7,43 +18,58 @@ header {
   padding-left: 50px;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(65, 52, 77);
-  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(29, 29, 29);
+  margin: 0;
 }
 header > h1 {
+  color: aquamarine;
   margin: 0;
 }
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(251, 237, 255);
+  background-color: rgb(99, 99, 99);
 }
-body > h1 {
+h1 {
   text-align: center;
-  color: rgb(0, 0, 0);
+  font-size: xx-large;
+  color: aquamarine;
+}
+.padres {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 0 10px 0 rgb(29, 29, 29);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+p {
+  text-shadow: black 1px 1px 1px;
+  color: rgb(223, 255, 244);
+  font-size: x-large;
 }
 /*footer*/
 footer {
   display: flex;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(65, 52, 77);
+  background-color: rgb(29, 29, 29);
   padding-top: 1px;
   justify-content: space-evenly;
 }
 h3 {
   text-align: center;
   font-size: xx-large;
-  color: white;
+  color: aquamarine;
 }
 .foot {
   margin-top: 20px;
   font-weight: bold;
-  color: rgb(0, 0, 0);
   list-style: none;
 }
 .foot,
 a {
   padding-top: 5px;
-  color: rgb(255, 255, 255);
+  color: aquamarine;
   text-decoration: none;
 }
