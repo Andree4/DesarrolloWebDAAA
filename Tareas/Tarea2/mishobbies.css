@@ -18,6 +18,21 @@ header > h1 {
   margin: 0;
   color: aquamarine;
 }
+.juegos{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+  align-items: center;
+  background-color: rgb(29, 29, 29);
+}
+.juegos video,
+.juegos img {
+  width: 200px;
+  height: auto;
+}
+
 div {
   text-align: center;
 }
@@ -25,6 +40,7 @@ ul > video,
 img {
   width: 500px;
 }
+
 body > div > ul > li {
   list-style: none;
   color: rgb(223, 255, 244);
@@ -61,6 +77,19 @@ div > img {
   text-align: center;
   background-color: rgb(99, 99, 99);
 }
+.prog{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+  align-items: center;
+  background-color: rgb(29, 29, 29);
+}
+.prog > img {
+  width: 200px;
+  height: auto;
+}
 /*footer*/
 footer {
   display: flex;
@@ -85,3 +114,7 @@ a {
   color: aquamarine;
   text-decoration: none;
 }
+.foot, a:hover{
+  color: rgb(33, 177, 221);
+}
+

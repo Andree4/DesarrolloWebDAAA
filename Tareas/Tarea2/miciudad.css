@@ -42,8 +42,8 @@ div > h1 > p {
   margin: 20px 0;
 }
 div > img {
-  width: 650px;
-  height: 550px;
+  width: auto;
+  height: 12cm;
 }
 table {
   width: 100%;
@@ -61,6 +61,7 @@ td {
   font-size: x-large;
   display: flex;
   justify-content: space-around;
+  width: auto;
   color: rgb(255, 79, 79);
 }
 
@@ -105,4 +106,7 @@ a {
   padding-top: 5px;
   color: rgb(255, 79, 79);
   text-decoration: none;
+}
+.foot, a:hover{
+  color: rgb(241, 17, 17);
 }
