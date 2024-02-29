@@ -19,7 +19,7 @@ img {
   height: 100px;
   margin-right: 30px;
 }
-.container {
+.Carrera {
   font-family: Arial, Helvetica, sans-serif;
   color: rgb(39, 11, 11);
   padding: 10px;
@@ -29,18 +29,18 @@ img {
 h3 {
   margin: 0;
 }
-.Uni {
+.Logo {
   font-family: "Times New Roman", Times, serif;
   color: red;
   align-items: center;
   display: flex;
   justify-content: center;
 }
-.Bod {
+.Uni {
   display: flex;
   flex-direction: column;
 }
-.fac {
+.Facu {
   color: blue;
   align-items: baseline;
   display: flex;
