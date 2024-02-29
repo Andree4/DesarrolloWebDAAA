@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(136, 136, 136);
+}
+header {
+  padding: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(29, 29, 29);
+  margin: 0;
+  color: white;
+}
+header > h1 {
+  margin: 0;
+  color: aquamarine;
+}
+.juegos{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+  align-items: center;
+  background-color: rgb(29, 29, 29);
+}
+.juegos video,
+.juegos img {
+  width: 200px;
+  height: auto;
+}
+
+div {
+  text-align: center;
+}
+ul > video,
+img {
+  width: 500px;
+}
+
+body > div > ul > li {
+  list-style: none;
+  color: rgb(223, 255, 244);
+  text-shadow: black 1px 1px 1px;
+  font-size: x-large;
+}
+body > div > li {
+  list-style: none;
+  font-size: x-large;
+}
+p {
+  text-align: center;
+  font-size: x-large;
+  color: rgb(223, 255, 244);
+}
+li > img {
+  width: 200px;
+  height: auto;
+}
+h1 {
+  text-align: center;
+  color: aquamarine;
+  font-size: xx-large;
+  text-shadow: black 1px 1px 1px;
+}
+div > img {
+  width: 60%;
+  margin-bottom: 30px;
+}
+.dibujo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(99, 99, 99);
+}
+.prog{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: white;
+  align-items: center;
+  background-color: rgb(29, 29, 29);
+}
+.prog > img {
+  width: 200px;
+  height: auto;
+}
+/*footer*/
+footer {
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(29, 29, 29);
+  padding-top: 1px;
+  justify-content: space-evenly;
+}
+h3 {
+  text-align: center;
+  font-size: xx-large;
+  color: aquamarine;
+}
+.foot {
+  margin-top: 20px;
+  font-weight: bold;
+  list-style: none;
+}
+.foot,
+a {
+  padding-top: 5px;
+  color: aquamarine;
+  text-decoration: none;
+}
+.foot, a:hover{
+  color: rgb(33, 177, 221);
+}
+
