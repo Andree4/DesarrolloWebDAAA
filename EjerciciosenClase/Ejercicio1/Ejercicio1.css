@@ -1,0 +1,109 @@
+header {
+  background-color: rgb(25, 202, 25);
+  display: flex;
+  height: 150px;
+  flex-direction: column;
+}
+.Ejercicio1 {
+  width: 900px;
+  border: 1px solid black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  margin: 0;
+  margin-left: 20%;
+}
+
+img {
+  width: 80px;
+  height: 100px;
+  margin-right: 30px;
+}
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(39, 11, 11);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+h3 {
+  margin: 0;
+}
+.Uni {
+  font-family: "Times New Roman", Times, serif;
+  color: red;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.Bod {
+  display: flex;
+  flex-direction: column;
+}
+.fac {
+  color: blue;
+  align-items: baseline;
+  display: flex;
+  justify-content: space-between;
+}
+h1,
+h2 {
+  font-size: xx-large;
+  margin: 0;
+}
+#red {
+  color: red;
+}
+#yellow {
+  color: yellow;
+}
+#green {
+  color: green;
+}
+section {
+  background-color: white;
+  display: flex;
+}
+section > div {
+  padding-top: 10px;
+
+  width: 99px;
+  padding-bottom: 50px;
+  margin: 0;
+}
+#P1 {
+  border-right: 1px solid black;
+}
+#P2 {
+  border-left: 1px solid black;
+}
+section > h2 {
+  margin: 0;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  width: 700px;
+}
+section > div > h2 {
+  padding-top: 10px;
+  margin: 0;
+  font-size: medium;
+}
+footer {
+  height: 100px;
+  background-color: rgb(120, 188, 233);
+  padding: 0;
+}
+footer > ul {
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+footer > ul > li {
+  color: white;
+  padding: 5px;
+}
