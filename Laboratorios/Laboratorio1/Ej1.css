@@ -1,0 +1,120 @@
+/*Rojo=#FF0000
+Amarillo=#FFFF00
+Verde=#00B050
+Celeste=#4C9BD3
+Azul=#366F91*/
+#red {
+  color: #ff0000;
+}
+#yellow {
+  color: #ffff00;
+}
+#green {
+  color: #00b050;
+}
+#blue {
+  color: #366f91;
+}
+#celeste {
+  color: #4c9bd3;
+}
+#Nomb {
+  background-color: #4c9bd3;
+}
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-decoration: none;
+}
+header {
+  margin: 0;
+
+  padding-bottom: 30px;
+  width: 900px;
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.Texto {
+  padding-top: 30px;
+}
+img {
+  width: auto;
+  height: 100px;
+}
+.facultad {
+  display: flex;
+  justify-content: space-between;
+}
+h1 {
+  margin: 0;
+  font-size: large;
+}
+.Alumno {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+#Semestre {
+  text-align: center;
+}
+#logo2 {
+  width: 130px;
+  padding-top: 30px;
+}
+section {
+  display: flex;
+  width: 900px;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+section > div {
+  padding: 20px;
+}
+.autenticacion {
+  margin: 0;
+  width: 770px;
+  border-right: 1px solid black;
+}
+.autenticacion > h1 {
+  padding: 5px;
+}
+.Pregunta {
+  background-color: #366f91;
+
+  width: 130px;
+  padding: 0;
+  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.Pregunta > h4 {
+  width: 100px;
+  border: 1px solid black;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+}
+#r {
+  background-color: #ff0000;
+}
+#y {
+  background-color: #ffff00;
+}
+#g {
+  background-color: #00b050;
+}
+#b {
+  background-color: white;
+}
+footer {
+  margin: 0;
+  border: 1px solid black;
+  width: 900px;
+  height: 50px;
+  background-color: #4c9bd3;
+  text-align: center;
+}
