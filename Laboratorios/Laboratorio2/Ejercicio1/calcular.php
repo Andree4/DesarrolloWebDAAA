@@ -1,5 +1,8 @@
 <?php
 $n = $_POST["numero"];
-$suma = array_sum(str_split($n));
-echo "La suma de dígitos es $suma";
-
+$suma = 0;
+$digitos = str_split($n);
+foreach ($digitos as $digito) {
+    $suma += $digito;
+}
+echo "La suma de digitos es $suma";
