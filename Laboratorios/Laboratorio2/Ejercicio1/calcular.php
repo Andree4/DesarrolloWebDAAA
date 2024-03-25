@@ -1,8 +1,7 @@
 <?php
 $n = $_POST["numero"];
 $suma = 0;
-$digitos = str_split($n);
-foreach ($digitos as $digito) {
-    $suma += $digito;
+for ($i = 0; $i < strlen($n); $i++) {
+    $suma += $n[$i];
 }
 echo "La suma de digitos es $suma";
