@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palabras Ordenadas</title>
     <style>
-        ul {
+        ol {
             border: 1px solid red;
             background-color: yellow;
             text-align: center;
@@ -26,11 +26,11 @@
     $palabras = $_POST['palabras'];
     $palabrasOrdenadas = ordenarPalabras($palabras);
     echo "<h2>Palabras Ordenadas:</h2>";
-    echo "<ul>";
+    echo "<ol>";
     foreach ($palabrasOrdenadas as $palabra) {
         echo "<li>$palabra</li>";
     }
-    echo "</ul>";
+    echo "</ol>";
     ?>
 </body>
 
