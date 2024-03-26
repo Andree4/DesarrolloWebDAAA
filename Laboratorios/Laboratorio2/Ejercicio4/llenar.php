@@ -15,7 +15,7 @@
     <form action='ordenar.php' method='POST'>
         <?php
         for ($i = 0; $i < $cantidad; $i++) {
-            echo "<input type='text' name='palabras[]' required><br>";
+            echo "<input type='text' name='palabras'><br>";
         }
         ?>
         <input type="submit" value="Ordenar" />
