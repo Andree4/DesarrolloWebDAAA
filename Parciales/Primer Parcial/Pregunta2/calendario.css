@@ -1,0 +1,23 @@
+table {
+  border: 1px solid rgb(131, 158, 89);
+  border-collapse: collapse;
+  text-align: center;
+  padding: 10px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+}
+.meses {
+  background-color: rgb(131, 158, 89);
+  color: white;
+}
+.impar {
+  border: 1px solid rgb(131, 158, 89);
+  background-color: #e2efd9;
+}
+.par {
+  border: 1px solid rgb(131, 158, 89);
+  background-color: #ffff;
+}

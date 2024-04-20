@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      label,
+      input {
+        width: 50px;
+        margin-bottom: 10px;
+      }
+      input {
+        margin-right: 30px;
+        border: 2px solid green;
+      }
+      select {
+        margin-right: 20px;
+        border: 2px solid green;
+      }
+      .enviar {
+        border-radius: 5px;
+        border: 2px solid green;
+        background-color: rgb(131, 158, 89);
+        color: white;
+      }
+      form {
+        padding: 20px;
+        width: 300px;
+        border: 2px solid green;
+      }
+    </style>
+    <title>Pregunta2</title>
+  </head>
+  <body>
+    <form action="calendario.php" method="post">
+      <label for="">mes</label>
+      <select name="mes">
+        <option value="1">Enero</option>
+        <option value="2">Febrero</option>
+        <option value="3">Marzo</option>
+        <option value="4">Abril</option>
+        <option value="5">Mayo</option>
+        <option value="6">Junio</option>
+        <option value="7">Julio</option>
+        <option value="8">Agosto</option>
+        <option value="9">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+      </select>
+      <label for="">año</label>
+      <input type="number" name="año" />
+      <div>
+        <label for="">tamaño</label>
+        <input type="number" name="tamaño" />
+        <input class="enviar" type="submit" value="enviar" />
+      </div>
+    </form>
+  </body>
+</html>
