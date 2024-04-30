@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio en clases 4</title>
+    <style>
+      #resultado {
+        border: 1px solid red;
+        padding: 50px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <label for="a">a</label>
+      <input type="number" name="a" id="a" value="2" />
+      <br />
+      <label for="b">b</label>
+      <input type="number" name="b" id="b" value="1" />
+      <br />
+      <select name="operacion" id="operacion" onchange="calcular()">
+        <option value="1">Suma</option>
+        <option value="2">Resta</option>
+        <option value="3">Multiplicación</option>
+        <option value="4">División</option>
+      </select>
+      <div id="resultado"></div>
+      <script>
+        function calcular() {
+          var a = document.getElementById("a");
+          var b = document.getElementById("b");
+          var operacion = document.getElementById("operacion").value;
+          switch (operacion) {
+            case "1":
+              var c = parseInt(a.value) + parseInt(b.value);
+              break;
+            case "2":
+              var c = parseInt(a.value) - parseInt(b.value);
+              break;
+            case "3":
+              var c = parseInt(a.value) * parseInt(b.value);
+              break;
+            case "4":
+              var c = parseInt(a.value) / parseInt(b.value);
+              break;
+          }
+          document.getElementById("resultado").innerHTML = c;
+        }
+        document.getElementById("a").onchange = () => {
+          document.getElementById("resultado").innerHTML = "";
+        };
+        document.getElementById("b").onchange = () => {
+          document.getElementById("resultado").innerHTML = "";
+        };
+      </script>
+    </form>
+  </body>
+</html>
