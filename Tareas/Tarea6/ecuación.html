@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea 6</title>
+  </head>
+  <body>
+    <form>
+      <label for="a">a:</label>
+      <input type="number" id="a" name="a" />
+      <br /><br />
+      <label for="b">b:</label>
+      <input type="number" id="b" name="b" />
+      <br /><br />
+      <label for="c">c:</label>
+      <input type="number" id="c" name="c" />
+      <br /><br />
+      <input type="button" value="Calcular" onclick="calcularRaices()" />
+    </form>
+    <br />
+    <div id="resultado"></div>
+    <script>
+      function calcularRaices() {
+        var a = parseInt(document.getElementById("a").value);
+        var b = parseInt(document.getElementById("b").value);
+        var c = parseInt(document.getElementById("c").value);
+        var discriminante = b * b - 4 * a * c;
+        var resultado = document.getElementById("resultado");
+        if (discriminante < 0) {
+          resultado.innerHTML = `x1 = (-${b} + ${Math.sqrt(
+            -discriminante
+          )}i) / ${2 * a} 
+          <br/> 
+          x2 = (-${b} - ${Math.sqrt(-discriminante)}i) / ${2 * a}`;
+          resultado.style.color = "red";
+        } else {
+          var x1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+          var x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+          resultado.innerHTML = `x1 = ${x1} <br/> x2 = ${x2}`;
+          resultado.style.color = "black";
+        }
+      }
+    </script>
+  </body>
+</html>
