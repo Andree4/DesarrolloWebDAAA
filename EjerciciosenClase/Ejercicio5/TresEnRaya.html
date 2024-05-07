@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio en clases 5</title>
+    <style>
+      #contenedor,
+      h1 {
+        background-color: #7e7e7e;
+        text-align: center;
+        font-size: x-large;
+        color: white;
+        margin: 0 auto;
+        width: 200px;
+      }
+      button {
+        width: 50px;
+        height: 50px;
+      }
+      #turno {
+        background-color: rgb(82, 82, 82);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tres en raya</h1>
+    <div id="contenedor">
+      <button id="1" onclick="validar(1)"></button>
+      <button id="2" onclick="validar(2)"></button>
+      <button id="3" onclick="validar(3)"></button>
+      <br />
+      <button id="4" onclick="validar(4)"></button>
+      <button id="5" onclick="validar(5)"></button>
+      <button id="6" onclick="validar(6)"></button>
+      <br />
+      <button id="7" onclick="validar(7)"></button>
+      <button id="8" onclick="validar(8)"></button>
+      <button id="9" onclick="validar(9)"></button>
+      <div id="turno">Turno de X</div>
+    </div>
+    <script>
+      var turno = "X";
+      function validar(valor) {
+        var boton = document.getElementById(valor);
+        if (boton.innerHTML == "") {
+          boton.innerHTML = turno;
+          if (turno == "X") {
+            turno = "O";
+          } else {
+            turno = "X";
+          }
+          document.getElementById("turno").innerHTML = "Turno de " + turno;
+        } else {
+          document.getElementById("turno").innerHTML = "Casilla ocupada";
+        }
+      }
+    </script>
+  </body>
+</html>
