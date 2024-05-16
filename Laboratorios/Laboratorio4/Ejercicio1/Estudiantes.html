@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio1</title>
+    <style>
+      table {
+        text-align: center;
+        border-collapse: collapse;
+        width: 50%;
+      }
+      #head {
+        background-color: rgb(179, 179, 243);
+      }
+      .f1 {
+        background-color: rgb(255, 255, 255);
+      }
+      .f2 {
+        background-color: rgb(163, 163, 163);
+      }
+    </style>
+  </head>
+  <body>
+    <table border="1" id="tabla"></table>
+    <label for="Nombres">Nombres y Apellidos</label>
+    <input type="text" id="Nombres" />
+    <br />
+    <label for="edad">Edad</label>
+    <input type="number" id="edad" />
+    <br />
+    <label for="materia">Materia</label>
+    <input type="text" id="materia" />
+    <br />
+    <label for="nota">Nota</label>
+    <input type="number" id="nota" />
+    <br />
+    <button id="Boton" onclick="Añadir()">Añadir</button>
+
+    <script>
+      var estudiantes = [
+        {
+          nro: 1,
+          Nombres: "Juan Perez",
+          edad: 25,
+          materia: "SIS-256",
+          nota: 83,
+        },
+        {
+          nro: 2,
+          Nombres: "Ricardo Luna",
+          edad: 30,
+          materia: "SIS-258",
+          nota: 70,
+        },
+        {
+          nro: 3,
+          Nombres: "Teresa Tomasa",
+          edad: 26,
+          materia: "SIS-256",
+          nota: 84,
+        },
+        {
+          nro: 4,
+          Nombres: "Favian Umbre",
+          edad: 24,
+          materia: "SIS-258",
+          nota: 70,
+        },
+      ];
+
+      function actualizarTabla() {
+        var tabla = document.getElementById("tabla");
+        tabla.innerHTML = `
+        <tr id="head">
+        <td>Nro</td>
+        <td>Apellidos y Nombres</td>
+        <td>Edad</td>
+        <td>Materias</td>
+        <td>Nota</td>
+        </tr>
+        `;
+        var band = 1;
+        estudiantes.forEach((TEstudiantes) => {
+          var tr = document.createElement("tr");
+
+          if (band == 1) {
+            tr.innerHTML = `
+            <td class="f1">${TEstudiantes.nro}</td>
+            <td class="f1">${TEstudiantes.Nombres}</td>
+            <td class="f1">${TEstudiantes.edad}</td>
+            <td class="f1"> ${TEstudiantes.materia}</td>
+            <td class="f1">${TEstudiantes.nota}</td>
+          `;
+            band = 0;
+          } else {
+            tr.innerHTML = `
+            <td class="f2">${TEstudiantes.nro}</td>
+            <td class="f2">${TEstudiantes.Nombres}</td>
+            <td class="f2"> ${TEstudiantes.edad}</td>
+            <td class="f2">${TEstudiantes.materia}</td>
+            <td class="f2">${TEstudiantes.nota}</td>
+          `;
+            band = 1;
+          }
+
+          tabla.appendChild(tr);
+        });
+      }
+
+      function Añadir() {
+        var Nombres = document.getElementById("Nombres").value;
+        var edad = document.getElementById("edad").value;
+        var materia = document.getElementById("materia").value;
+        var nota = document.getElementById("nota").value;
+
+        var nuevoEstudiante = {
+          nro: estudiantes.length + 1,
+          Nombres: Nombres,
+          edad: edad,
+          materia: materia,
+          nota: nota,
+        };
+        estudiantes.push(nuevoEstudiante);
+        actualizarTabla();
+
+        document.getElementById("Nombres").value = "";
+        document.getElementById("edad").value = "";
+        document.getElementById("materia").value = "";
+        document.getElementById("nota").value = "";
+      }
+
+      actualizarTabla();
+    </script>
+  </body>
+</html>

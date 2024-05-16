@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio4</title>
+    <style>
+      button {
+        background-color: rgb(109, 109, 236);
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <label>Elemento Lista</label>
+    <input type="text" id="elemento" />
+    <button onclick="Añadir()">Añadir</button>
+    <ul id="lista"></ul>
+    <script>
+      function Añadir() {
+        var elemento = document.getElementById("elemento").value;
+        var lista = document.getElementById("lista");
+        var li = document.createElement("li");
+        li.innerHTML = elemento;
+        if (elemento.includes(" de ")) {
+          li.style.backgroundColor = "yellow";
+        }
+        lista.appendChild(li);
+      }
+    </script>
+  </body>
+</html>
