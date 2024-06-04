@@ -1,0 +1,129 @@
+.aviso {
+  background-color: red;
+  height: 50px;
+  width: 900px;
+  border: 1px solid black;
+  display: none;
+  color: white;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  font-size: large;
+}
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 900px;
+  border: 1px solid black;
+}
+
+.mayor {
+  display: flex;
+  flex-direction: row;
+  height: 350px;
+  width: 900px;
+}
+
+.pizarra {
+  height: 350px;
+  width: 700px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario {
+  height: 250px;
+  width: 600px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.div_login {
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+.img_captcha {
+  width: 100px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.lateral {
+  height: 350px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  background-color: #ffff00;
+}
+
+.fila {
+  display: flex;
+  flex-direction: row;
+}
+
+.boton {
+  height: 70px;
+  width: 70px;
+  margin: 15px;
+  border: 1px solid black;
+  background-color: #ffffff;
+  align-content: center;
+  justify-content: center;
+}
+
+.letra {
+  color: blue;
+  width: 200px;
+}
+
+.Datos {
+  display: flex;
+  flex-direction: row;
+}
+
+.letra2 {
+  padding: 0px;
+  margin: auto;
+  color: black;
+  width: 10px;
+}
+
+.menor {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 900px;
+}
+
+.boton_menu {
+  height: 50px;
+  width: 150px;
+  border: 1px solid black;
+  background-color: #c00000;
+  align-content: center;
+  justify-content: center;
+}
+.letra_menu {
+  padding: 0px;
+  margin: auto;
+  color: white;
+  width: 70px;
+}
+
+.mensaje {
+  height: 50px;
+  width: 750px;
+  border: 1px solid black;
+  background-color: #ffc000;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}

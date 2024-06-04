@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="aviso" id="aviso"></div>
+    <div class="contenedor">
+      <div class="mayor">
+        <div class="pizarra" id="principal"></div>
+
+        <div class="lateral" id="menu">
+          <div class="fila">
+            <div class="boton" id="boton1">
+              <h2 class="letra">1</h2>
+            </div>
+            <div class="boton" id="boton1">
+              <h2 class="letra">2</h2>
+            </div>
+          </div>
+          <div class="fila">
+            <button class="boton" type="button" onclick="loadLogin()">
+              <h2 class="letra">3</h2>
+            </button>
+            <div class="boton" id="boton1">
+              <h2 class="letra">4</h2>
+            </div>
+          </div>
+          <div class="fila">
+            <div class="boton" id="boton1">
+              <h2 class="letra">5</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="menor">
+        <div class="boton_menu" id="boton_menu">
+          <h2 class="letra_menu">Menu</h2>
+        </div>
+        <div class="mensaje" id="mensaje">
+          <h2 class="letra">Mensaje</h2>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let isLoggedIn = false;
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Crear una nueva solicitud XMLHttpRequest
+      var xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        document.getElementById("mensaje").innerHTML = this.responseText;
+      };
+
+      xhttp.open("GET", "nombre.html", true);
+      // Enviar la solicitud
+      xhttp.send();
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Crear una nueva solicitud XMLHttpRequest
+      var xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        document.getElementById("menu").innerHTML = this.responseText;
+      };
+
+      xhttp.open("GET", "botones.html", true);
+      // Enviar la solicitud
+      xhttp.send();
+    });
+
+    document
+      .getElementById("boton_menu")
+      .addEventListener("click", function () {
+        // Crear una nueva solicitud XMLHttpRequest
+        var xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          document.getElementById("aviso").style.display = "none";
+          document.getElementById("mensaje").innerHTML = this.responseText;
+          document.getElementById("principal").style.backgroundColor = "white";
+          document.getElementById("principal").innerHTML = " ";
+        };
+
+        xhttp.open("GET", "nombre.html", true);
+        // Enviar la solicitud
+        xhttp.send();
+      });
+
+    function loadLogin() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("principal").innerHTML = this.responseText;
+          document.getElementById("aviso").style.display = "none";
+          document.getElementById("mensaje").innerHTML = " ";
+          document.getElementById("principal").style.backgroundColor = "white";
+        }
+      };
+      xhttp.open("GET", "login.html", true);
+      xhttp.send();
+    }
+
+    function submitForm() {
+      const formData = new FormData(document.getElementById("myForm"));
+      const xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          const response = JSON.parse(xhr.responseText);
+          document.getElementById("principal").innerHTML = " ";
+          if (response.estado == "logueado") {
+            isLoggedIn = true;
+            document.getElementById("aviso").style.display = "block";
+            if (response.nivel == 1) {
+              document.getElementById("aviso").innerHTML =
+                "Usuario autenticado Administrador sistema Nivel 1";
+            } else {
+              document.getElementById("aviso").innerHTML =
+                "Usuario autenticado Nivel 0";
+            }
+            document.getElementById("mensaje").innerHTML = " ";
+          } else {
+            document.getElementById("mensaje").innerHTML =
+              "Usuario, contraseña o captcha incorrectos";
+          }
+        }
+      };
+      xhr.open("POST", "submit_form.php", true);
+      xhr.send(formData);
+    }
+
+    function checkLoginStatus() {
+      // Crear una nueva solicitud XMLHttpRequest
+      var xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        if (isLoggedIn) {
+          document.getElementById("principal").style.backgroundColor = "white";
+          document.getElementById("principal").style.maxHeight = "350px";
+          document.getElementById("principal").style.overflow = "auto";
+          document.getElementById("principal").innerHTML = this.responseText;
+        } else {
+          document.getElementById("mensaje").innerHTML =
+            "Debe autenticarse para ver la lista de libros";
+        }
+      };
+
+      xhttp.open("GET", "listar.php", true);
+      // Enviar la solicitud
+      xhttp.send();
+    }
+
+    function editar(id) {
+      // Crear una nueva solicitud XMLHttpRequest
+      var xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        document.getElementById("principal").style.backgroundColor = "white";
+        document.getElementById("principal").innerHTML = this.responseText;
+      };
+
+      xhttp.open("GET", "editar.php?id=" + id, true);
+      // Enviar la solicitud
+      xhttp.send();
+    }
+
+    function actualizar(event) {
+      event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+      const formData = new FormData(document.getElementById("datosLibro"));
+      const xhr = new XMLHttpRequest();
+      // en onready statechange se vuelve a listar los libros
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          document.getElementById("principal").style.backgroundColor = "white";
+          document.getElementById("principal").innerHTML = this.responseText;
+        }
+      };
+      xhr.open("POST", "actualizar.php", true);
+      xhr.send(formData);
+    }
+    function cargarGaleria() {
+      fetch("galeria.php")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("menu").innerHTML = data;
+        });
+    }
+
+    function mostrarImagen(imagen, nombre) {
+      document.getElementById(
+        "principal"
+      ).innerHTML = `<img src="${imagen}" style="display: block; margin: auto;">`;
+      document.getElementById("mensaje").innerText = nombre;
+    }
+  </script>
+</html>
