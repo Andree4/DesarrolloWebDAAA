@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pregunta5</title>
+    <style>
+      table {
+        text-align: center;
+        margin: 20px;
+        border-collapse: collapse;
+      }
+      button {
+        padding: 10px;
+      }
+      td {
+        margin: 0px;
+        padding: 0px;
+      }
+    </style>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <table border="1px">
+      <tr>
+        <td><button onclick="llenar(11)" id="11" value="1">1</button></td>
+        <td><button onclick="llenar(22)" id="22" value="2">2</button></td>
+        <td><button onclick="llenar(33)" id="33" value="3">3</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="llenar(44)" id="44" value="4">4</button></td>
+        <td><button onclick="llenar(55)" id="55" value="5">5</button></td>
+        <td><button onclick="llenar(66)" id="66" value="6">6</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="llenar(77)" id="77" value="7">7</button></td>
+        <td><button onclick="llenar(88)" id="88" value="8">8</button></td>
+        <td><button onclick="llenar(99)" id="99" value="9">9</button></td>
+      </tr>
+      <tr>
+        <td><button onclick="llenar(100)" id="100" value="A">A</button></td>
+        <td><button onclick="llenar(200)" id="200" value="B">B</button></td>
+        <td><button onclick="llenar(300)" id="300" value="C">C</button></td>
+      </tr>
+      <tr>
+        <td colspan="2"><button onclick="autenticar()">Entrar</button></td>
+        <td><button onclick="limpiar()">Limpiar</button></td>
+      </tr>
+    </table>
+  </body>
+</html>
